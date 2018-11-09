@@ -104,6 +104,141 @@
     </div> <!-- End: Container -->
   </section>
 
+  <!-- POSTS -->
+  <section id="posts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="card">
+            <div class="card-header">
+              <h4>Latest Posts</h4>
+            </div>
+
+            <table class="table table-striped mb-0">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Post One</td>
+                  <td>Web Development</td>
+                  <td>November 10 2018</td>
+                  <td>
+                    <a href="./details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Post Two</td>
+                  <td>Tech Gadgets</td>
+                  <td>November 18 2018</td>
+                  <td>
+                    <a href="./details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Post Three</td>
+                  <td>Machine Learning</td>
+                  <td>November 19 2018</td>
+                  <td>
+                    <a href="./details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Post Four</td>
+                  <td>Business</td>
+                  <td>December 01 2018</td>
+                  <td>
+                    <a href="./details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Post Five</td>
+                  <td>Web Development</td>
+                  <td>December 03 2018</td>
+                  <td>
+                    <a href="./details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Post Six</td>
+                  <td>Health &amp; Wellness</td>
+                  <td>December 12 2018</td>
+                  <td>
+                    <a href="./details.html" class="btn btn-secondary">
+                      <i class="fas fa-angle-double-right"></i> Details
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div> <!-- End: .card-->
+        </div>
+        <div class="col-md-3">
+          <div class="card bg-primary text-white mb-3 text-center">
+            <div class="card-body">
+              <h3>Posts</h3>
+              <h4 class="display-4">
+                <i class="fas fa-pencil-alt"></i> 6
+              </h4>
+              <a href="./posts.html" class="btn btn-sm btn-outline-light">View</a>
+            </div>
+          </div>
+
+          <div class="card bg-success text-white mb-3 text-center">
+            <div class="card-body">
+              <h3>Categories</h3>
+              <h4 class="display-4">
+                <i class="fas fa-folder"></i> 4
+              </h4>
+              <a href="./categories.html" class="btn btn-sm btn-outline-light">View</a>
+            </div>
+          </div>
+
+          <div class="card bg-warning text-dark mb-3 text-center">
+            <div class="card-body">
+              <h3>Users</h3>
+              <h4 class="display-4">
+                <i class="fas fa-users"></i> 4
+              </h4>
+              <a href="./users.html" class="btn btn-sm btn-outline-dark">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+    <div class="container">
+      <p class="lead text-center">
+        Copyright &copy; <span id="year"></span> Blogen
+      </p>
+    </div>
+  </footer>
+
 
   <!-- ADD POST MODAL -->
   <div class="modal fade" id="add-post-modal">
@@ -191,42 +326,42 @@
 
   <!-- ADD USER MODAL -->
   <div class="modal fade" id="add-user-modal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <!-- MODAL HEADER -->
-          <div class="modal-header bg-warning text-dark">
-            <h5 class="modal-title">Add User</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <!-- MODAL BODY -->
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" placeholder="Name">
-              </div>
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                      <label for="password2">Confirm Password</label>
-                      <input type="password" class="form-control" placeholder="Confirm Password">
-                    </div>
-            </form>
-          </div> <!-- End: .modal-body -->
-          <div class="modal-footer">
-            <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
-          </div>
-        </div> <!-- End: .modal-content -->
-      </div>
-    </div> <!-- End: Add User Modal -->
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- MODAL HEADER -->
+        <div class="modal-header bg-warning text-dark">
+          <h5 class="modal-title">Add User</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="password2">Confirm Password</label>
+              <input type="password" class="form-control" placeholder="Confirm Password">
+            </div>
+          </form>
+        </div> <!-- End: .modal-body -->
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
+        </div>
+      </div> <!-- End: .modal-content -->
+    </div>
+  </div> <!-- End: Add User Modal -->
 
   <script src="./vendor/js/jquery-3.3.1.js"></script>
   <script src="./vendor/js/bootstrap.bundle.js"></script><!-- bootstrap.bundle.js include Popper, but not jQuery -->
