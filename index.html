@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" href="./vendor/css/all.css"><!-- Font Awesome Free 5.4.2 -->
   <link rel="stylesheet" href="./vendor/css/bootstrap.css">
   <link rel="stylesheet" href="./css/style.css">
+
   <title>Bootstrap Theme</title>
 </head>
 
@@ -53,7 +55,7 @@
               </a>
             </div>
           </li>
-          
+
           <!-- Logout -->
           <li class="nav-item">
             <a href="login.html" class="nav-link">
@@ -78,13 +80,172 @@
     </div>
   </header>
 
+  <!-- ACTIONS -->
+  <section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#add-post-modal">
+            <i class="fas fa-plus"></i> Add Post
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#add-category-modal">
+            <i class="fas fa-plus"></i> Add Category
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#add-user-modal">
+            <i class="fas fa-plus"></i> Add User
+          </a>
+        </div>
+        <div class="col-md-3"></div>
+      </div> <!-- End: Row -->
+    </div> <!-- End: Container -->
+  </section>
+
+
+  <!-- ADD POST MODAL -->
+  <div class="modal fade" id="add-post-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- MODAL HEADER -->
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Add Post</h5>
+          <button class="close" data-dismiss="modal">
+            <span class="text-white">&times;</span>
+          </button>
+        </div>
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" placeholder="Title">
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select class="form-control">
+                <option value="">Web Development</option>
+                <option value="">Tech Gadgets</option>
+                <option value="">Business</option>
+                <option value="">Health &amp; Wellness</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="image">Upload Image</label>
+              <div class="custom-file">
+                <input type="file" name="" id="image" class="custom-file-input">
+                <label for="image" class="custom-file-label">Choose One Image</label>
+              </div>
+              <small class="form-text text-muted">Max Size 3MB</small>
+            </div>
+            <div class="form-group">
+              <label for="body">Body</label>
+
+              <!-- <textarea name="editor1" id="editor1" class="form-control"></textarea> -->
+
+              <!-- The toolbar will be rendered in this container. -->
+              <div id="toolbar-container"></div>
+
+              <!-- This container will become the editable. -->
+              <div id="editor1">
+                <p>This is the initial editor content.</p>
+              </div>
+            </div>
+          </form>
+        </div> <!-- End: .modal-body -->
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal">Save Changes</button>
+        </div>
+      </div> <!-- End: .modal-content -->
+    </div>
+  </div> <!-- End: Add Post Modal -->
+
+  <!-- ADD CATEGORY MODAL -->
+  <div class="modal fade" id="add-category-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- MODAL HEADER -->
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Add Category</h5>
+          <button class="close" data-dismiss="modal">
+            <span class="text-white">&times;</span>
+          </button>
+        </div>
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" placeholder="Title">
+            </div>
+          </form>
+        </div> <!-- End: .modal-body -->
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
+        </div>
+      </div> <!-- End: .modal-content -->
+    </div>
+  </div> <!-- End: Add Category Modal -->
+
+  <!-- ADD USER MODAL -->
+  <div class="modal fade" id="add-user-modal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <!-- MODAL HEADER -->
+          <div class="modal-header bg-warning text-dark">
+            <h5 class="modal-title">Add User</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <!-- MODAL BODY -->
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                      <label for="password2">Confirm Password</label>
+                      <input type="password" class="form-control" placeholder="Confirm Password">
+                    </div>
+            </form>
+          </div> <!-- End: .modal-body -->
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
+          </div>
+        </div> <!-- End: .modal-content -->
+      </div>
+    </div> <!-- End: Add User Modal -->
 
   <script src="./vendor/js/jquery-3.3.1.js"></script>
   <script src="./vendor/js/bootstrap.bundle.js"></script><!-- bootstrap.bundle.js include Popper, but not jQuery -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/decoupled-document/ckeditor.js"></script>
 
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+    DecoupledEditor
+      .create(document.querySelector('#editor1'))
+      .then(editor => {
+        const toolbarContainer = document.querySelector('#toolbar-container');
+
+        toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   </script>
 </body>
 
