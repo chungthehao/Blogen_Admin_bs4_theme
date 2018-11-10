@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./vendor/css/all.css"><!-- Font Awesome Free 5.4.2 -->
+  <link rel="stylesheet" href="./vendor/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Bootstrap Theme</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+    <div class="container">
+      <a href="./index.html" class="navbar-brand">
+        Blogen
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <!-- Left -->
+        <ul class="navbar-nav">
+          <li class="nav-item px-2">
+            <a href="./index.html" class="nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="./posts.html" class="nav-link">Posts</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="./categories.html" class="nav-link">Categories</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="./users.html" class="nav-link">Users</a>
+          </li>
+        </ul> <!-- End: Left -->
+
+        <!-- Right -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Welcome dropdown menu -->
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              <i class="fas-fa-user"></i> Welcome Henry
+            </a>
+            <div class="dropdown-menu">
+              <a href="./profile.html" class="dropdown-item">
+                <i class="fas fa-user-circle"></i> Profile
+              </a>
+              <a href="./settings.html" class="dropdown-item">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+            </div>
+          </li>
+
+          <!-- Logout -->
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-user-times"></i> Logout
+            </a>
+          </li>
+        </ul> <!-- End: Right -->
+      </div>
+    </div> <!-- End: Container -->
+  </nav>
+
+  <!-- HEADER -->
+  <header id="main-header" class="py-2 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>
+            Post One
+          </h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ACTIONS -->
+  <section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="./index.html" class="btn btn-outline-dark btn-block">
+            <i class="fas fa-arrow-left"></i> Back To Dashboard
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="./index.html" class="btn btn-primary btn-block">
+            <i class="fas fa-check"></i> Save Changes
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="./index.html" class="btn btn-danger btn-block" data-toggle="modal" data-target="#delete-post-modal">
+            <i class="fas fa-trash"></i> Delete Post
+          </a>
+        </div>
+        <div class="col-md-3"></div>
+      </div> <!-- End: Row -->
+    </div> <!-- End: Container -->
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details">
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h4>Edit Post</h4>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" placeholder="Title" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select class="form-control">
+                <option value="">Web Development</option>
+                <option value="">Tech Gadgets</option>
+                <option value="">Business</option>
+                <option value="" selected>Health &amp; Wellness</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="image">Upload Image</label>
+              <div class="custom-file">
+                <input type="file" name="" id="image" class="custom-file-input">
+                <label for="image" class="custom-file-label">Choose One Image</label>
+              </div>
+              <small class="form-text text-muted">Max Size 3MB</small>
+            </div>
+            <div class="form-group">
+              <label for="body">Body</label>
+
+              <!-- <textarea name="editor1" id="editor1" class="form-control"></textarea> -->
+
+              <!-- The toolbar will be rendered in this container. -->
+              <div id="toolbar-container"></div>
+
+              <!-- This container will become the editable. -->
+              <div id="editor1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nihil, quibusdam optio perspiciatis assumenda non maxime obcaecati voluptate deserunt cumque ea quae possimus pariatur voluptatum consequatur voluptates eaque vero soluta quam nisi voluptatibus. Voluptatem fugiat itaque, nostrum rem labore vitae, dolorum culpa dicta nobis temporibus illum eveniet, quibusdam minus. Adipisci!</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+    <div class="container">
+      <p class="lead text-center">
+        Copyright &copy; <span id="year"></span> Blogen
+      </p>
+    </div>
+  </footer>
+
+
+  <!--  DELETE CONFIRMATION MODAL -->
+  <div class="modal fade" id="delete-post-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- MODAL HEADER -->
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Confirmation</h5>
+          <button class="close" data-dismiss="modal">
+            <span class="text-white">&times;</span>
+          </button>
+        </div>
+        <!-- MODAL BODY -->
+        <div class="modal-body">
+          Are you sure that you want to delete this post?
+        </div> <!-- End: .modal-body -->
+        <div class="modal-footer">
+          <button class="btn btn-danger" onclick="window.location = '/index.html';">Delete</button>
+          <button class="btn btn-secondary" data-dismiss="modal">Cancle</button>
+        </div>
+      </div> <!-- End: .modal-content -->
+    </div>
+  </div> <!-- End: Delete Confirmation Modal -->
+
+
+  <script src="./vendor/js/jquery-3.3.1.js"></script>
+  <script src="./vendor/js/bootstrap.bundle.js"></script><!-- bootstrap.bundle.js include Popper, but not jQuery -->
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.1.1/decoupled-document/ckeditor.js"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    DecoupledEditor
+      .create(document.querySelector('#editor1'))
+      .then(editor => {
+        const toolbarContainer = document.querySelector('#toolbar-container');
+
+        toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+</body>
+
+</html>
